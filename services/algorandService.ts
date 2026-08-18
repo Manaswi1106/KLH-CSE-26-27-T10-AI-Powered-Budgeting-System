@@ -1,3 +1,4 @@
+//Blockchain transaction/status layer
 export interface AlgorandTransaction {
   txId: string;
   blockNumber: number;
@@ -14,19 +15,19 @@ export async function createAlgorandTransaction(
   amount: number
 ): Promise<AlgorandTransaction> {
 
-  // Simulate blockchain delay
+  // blockchain delay
   await new Promise((resolve) => setTimeout(resolve, 1200));
-
+//Generating transaction ID
   const random = Math.random().toString(16).substring(2).toUpperCase();
 
   const txId = `ALGO_TX_${random}`;
-
+//Generating block number
   const blockNumber =
     38490000 + Math.floor(Math.random() * 5000);
-
+//Generating block hash
   const blockHash =
     `BLK_ALGO_${Math.random().toString(16).substring(2).toUpperCase()}`;
-
+//Returning transaction information
   return {
     txId,
     blockNumber,

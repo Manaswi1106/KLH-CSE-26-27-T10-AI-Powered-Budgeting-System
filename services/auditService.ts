@@ -1,3 +1,6 @@
+//Records system and payment events
+//keeping track of important actions
+//AuditLog interface
 export interface AuditLog {
   id: string;
   timestamp: string;
@@ -6,16 +9,16 @@ export interface AuditLog {
   user: string;
   details: any;
 }
-
+//Audit log storage
 const auditLogs: AuditLog[] = [];
-
+//creates audit log
 export function createAuditLog(
   action: string,
   status: "SUCCESS" | "FAILED",
   user: string,
   details: any
 ): AuditLog {
-
+//create log
   const log: AuditLog = {
     id: "AUDIT_" + Date.now(),
     timestamp: new Date().toISOString(),

@@ -1,3 +1,5 @@
+//Demonstrates AI-agent payment authorization
+//Payment Request
 export interface X402PaymentRequest {
   amount: number;
   sender: string;
@@ -13,18 +15,18 @@ export interface X402PaymentResponse {
   message: string;
   timestamp: string;
 }
-
+//Authorization
 export async function authorizeX402Payment(
   request: X402PaymentRequest
 ): Promise<X402PaymentResponse> {
 
-  // Simulate network delay
+  //  network delay
   await new Promise((resolve) => setTimeout(resolve, 1000));
-
+//Payment Token
   const paymentToken =
     "x402_demo_" +
     Math.random().toString(36).substring(2, 10).toUpperCase();
-
+//x402 Response
   return {
     approved: true,
     status: 402,

@@ -1,3 +1,4 @@
+//Decides whether a payment satisfies security rules
 export interface PaymentPolicy {
   dailyLimit: number;
   transactionLimit: number;
