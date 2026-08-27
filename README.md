@@ -28,7 +28,7 @@ This project delivers an **intelligent, scalable, and service-oriented personal 
 * **Interactive Dashboard:** Visualize budget utilization, cash flow patterns, and savings progress.
 
 ---
-
+──────────────────────────────┐│      Interactive User        ││          Dashboard           │└──────────────┬───────────────┘│[ API Gateway ]│┌───────────────┬────────┴──────┬───────────────┬───────────────┐│               │               │               │               │┌───────▼───────┐┌──────▼───────┐┌──────▼───────┐┌──────▼───────┐┌──────▼───────┐│Auth Service   ││Transaction Svc││Budget Service││AI Analysis Svc││Notification Svc││- JWT & Login  ││- Income/Exp  ││- Target Sets ││- ML Models   ││- Alerts       ││- User Profile ││- Ledger Logs ││- Limits Logs ││- Forecasts    ││- Reminders   │└───────┬───────┘└──────┬───────┘└──────┬───────┘└──────┬───────┘└──────┬───────┘│               │               │               │               │┌───────▼───────┐┌──────▼───────┐┌──────▼───────┐┌──────▼───────┐┌──────▼───────┐│  Auth DB      ││Transaction DB││  Budget DB   ││ Analytics DB ││ Notification DB│└───────────────┘└───────────────┘└───────────────┘└───────────────┘└───────────────┘
 ## Project Architecture
 The application uses a modular, cloud-native **Microservices Architecture**. Features are broken down into independent services that communicate asynchronously or via lightweight REST APIs.
 
